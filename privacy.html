@@ -67,6 +67,7 @@
     <li>Weather readings are kept as CSV and JSON Lines files on the owner’s own computers.</li>
     <li>About once an hour, those files are copied over encrypted HTTPS to a private folder in the owner’s own Google Drive. The folder is not shared.</li>
     <li>The Google sign-in token is stored only in the backup tool’s configuration on the owner’s machine and is never shared.</li>
+    <li>Readings are kept until the owner deletes them; there is no automatic expiry. The sign-in token is kept until the owner revokes it.</li>
   </ul>
 
   <h2>How data is shared</h2>
