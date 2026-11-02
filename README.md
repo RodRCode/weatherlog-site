@@ -9,7 +9,7 @@ Static pages for **Google OAuth branding** of WeatherLog, a personal single-user
 | Terms | https://weatherlog.rodrcode.com/terms.html |
 | Support | https://weatherlog.rodrcode.com/support.html |
 
-Open items: three visible placeholders (support email, `[PUBLISHER]` token, planned GitHub copy). Do not publish with placeholders showing. Never put client IDs, folder IDs, host names, IPs, or file paths on the pages.
+Never put client IDs, folder IDs, host names, IPs, or file paths on the pages.
 
 ## GitHub Pages (same as canvas / peck / rodrcode.com)
 
@@ -21,4 +21,4 @@ CNAME `weatherlog` → `rodrcode.github.io`. Leave the `canvas` / `peck` CNAMEs,
 
 ## Cloud branding (WeatherLog's own Cloud project)
 
-Home `https://weatherlog.rodrcode.com/`, Privacy `…/privacy.html`, Terms `…/terms.html`, authorized domain `rodrcode.com`, support email `contact@rodrcode.com`.
+Home `https://weatherlog.rodrcode.com/`, Privacy `…/privacy.html`, Terms `…/terms.html`, authorized domain `rodrcode.com`, support email `rodrcode@gmail.com`.
