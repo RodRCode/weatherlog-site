@@ -1,6 +1,6 @@
 # WeatherLog — public site (DRAFT, not published)
 
-Static pages for **Google OAuth branding** (and store listings later). App name must be exactly **WeatherLog** in Cloud, `<title>`, and `<h1>`.
+Static pages for **Google OAuth branding** of WeatherLog, a personal single-user Drive backup job (`drive.file` scope only). App name must be exactly **WeatherLog** in Cloud, `<title>`, and `<h1>`.
 
 | Page | Public URL (once live) |
 |------|------------|
@@ -9,7 +9,7 @@ Static pages for **Google OAuth branding** (and store listings later). App name 
 | Terms | https://weatherlog.rodrcode.com/terms.html |
 | Support | https://weatherlog.rodrcode.com/support.html |
 
-Open items: search the HTML for `TODO(Rod)` (comments) and `class="todo"` (visible placeholders). Do not publish with placeholders showing.
+Open items: three visible placeholders (support email, `[PUBLISHER]` token, planned GitHub copy). Do not publish with placeholders showing. Never put client IDs, folder IDs, host names, IPs, or file paths on the pages.
 
 ## GitHub Pages (same as canvas / peck / rodrcode.com)
 

@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WeatherLog</title>
   <meta name="application-name" content="WeatherLog" />
-  <meta name="description" content="WeatherLog is an application by RodRCode LLC. Privacy policy, terms of service, and support." />
-  <meta property="og:title" content="WeatherLog" />
-  <meta property="og:site_name" content="WeatherLog" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://weatherlog.rodrcode.com/" />
   <link rel="canonical" href="https://weatherlog.rodrcode.com/" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- TODO(Rod): publisher name. Replace every [PUBLISHER] token on this site with "RodRCode LLC" or with Rod personally. -->
   <nav>
+    <a href="index.html" aria-current="page">Home</a> ·
     <a href="privacy.html">Privacy Policy</a> ·
     <a href="terms.html">Terms of Service</a> ·
     <a href="support.html">Support</a>
@@ -22,26 +19,29 @@
 
   <h1>WeatherLog</h1>
   <p class="sub">The application name is WeatherLog.</p>
-  <!-- TODO(Rod): platform (iOS / Android / web app / script?) is not confirmed anywhere on the box or in RodRCode GitHub. -->
-  <p class="sub">Official home page for WeatherLog, <span class="todo">[TODO(Rod): platform, e.g. “an iPhone app” / “a web app”]</span>, provided by RodRCode LLC.</p>
+  <p class="sub">Official home page for WeatherLog, a personal weather-logging backup tool published by <span class="todo">[PUBLISHER]</span>.</p>
 
   <h2>Purpose of WeatherLog</h2>
-  <!-- TODO(Rod): one-paragraph description of what WeatherLog does. Nothing found in box files, memory, Gmail, or GitHub. -->
   <p>
-    <span class="todo">[TODO(Rod): What WeatherLog does, in two or three plain sentences. For example: what weather data it records, where that data comes from, and what the user gets out of it.]</span>
+    WeatherLog is a small, single-user command-line job. It regularly records public weather readings
+    for Oak Hill Splash Park in Carrollton, Texas, from the City of Carrollton’s public Perry Weather widget,
+    and backs those readings up to a private folder in its owner’s own Google Drive.
+  </p>
+  <p>
+    WeatherLog has no user interface, no sign-up, and no other users. It is not a mobile app or a website.
+    The only person who signs in is its owner.
   </p>
 
   <h2>Google user data</h2>
-  <!-- TODO(Rod): list the exact Google OAuth scopes and Google APIs WeatherLog requests (must match the Cloud consent screen / Data Access page). -->
   <p>
-    When you authorize WeatherLog with your Google Account, it requests access only to
-    <span class="todo">[TODO(Rod): exact Google OAuth scopes and APIs, e.g. “https://www.googleapis.com/auth/… (Google … API)”]</span>,
-    and uses it only to <span class="todo">[TODO(Rod): the user-facing feature that needs this access]</span>.
-    See the <a href="privacy.html">Privacy Policy</a> for exactly what is accessed, stored, and shared,
-    and how to revoke access and delete your data.
+    WeatherLog uses the Google Drive API with a single scope,
+    <code>https://www.googleapis.com/auth/drive.file</code>, which lets it see and manage only the files
+    and folders WeatherLog itself creates. It cannot read any other Drive files, and it does not access
+    Gmail, Calendar, Contacts, or profile information.
+    See the <a href="privacy.html">Privacy Policy</a> for details.
   </p>
 
-  <p><strong>WeatherLog is not affiliated with, endorsed by, or associated with Google.</strong></p>
+  <p><strong>WeatherLog is not affiliated with, endorsed by, or associated with Google, the City of Carrollton, or Perry Weather.</strong></p>
 
   <ul>
     <li><a href="privacy.html">Privacy Policy</a></li>
@@ -49,9 +49,12 @@
     <li><a href="support.html">Support</a></li>
   </ul>
 
+  <!-- TODO(Rod): confirm the support/contact email (currently contact@rodrcode.com, pending confirmation). -->
+  <p>Contact: <a href="mailto:contact@rodrcode.com?subject=WeatherLog">contact@rodrcode.com</a> <span class="todo">[TODO(Rod): confirm support email]</span></p>
+
   <footer>
-    <p>Support email: <a href="mailto:contact@rodrcode.com?subject=WeatherLog">contact@rodrcode.com</a></p>
-    <p>&copy; 2026 RodRCode LLC · Texas, USA</p>
+    <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
+    <p>&copy; 2026 <span class="todo">[PUBLISHER]</span></p>
   </footer>
 </body>
 </html>

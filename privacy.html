@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — WeatherLog</title>
+  <meta name="application-name" content="WeatherLog" />
   <link rel="canonical" href="https://weatherlog.rodrcode.com/privacy.html" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- TODO(Rod): publisher name. Replace every [PUBLISHER] token on this site with "RodRCode LLC" or with Rod personally. -->
   <nav>
     <a href="index.html">Home</a> ·
     <a href="privacy.html" aria-current="page">Privacy Policy</a> ·
@@ -19,74 +21,62 @@
   <p class="meta">WeatherLog · Effective and last updated: 2026-11-02</p>
 
   <p>
-    This policy describes how <strong>WeatherLog</strong> (“WeatherLog” or “the App”),
-    <span class="todo">[TODO(Rod): platform, e.g. “an iPhone app” / “a web app”]</span>
-    provided by <strong>RodRCode LLC</strong> (“we”, “us”), accesses, uses, stores, and shares information,
-    including information received from Google APIs.
-    WeatherLog is <strong>not affiliated with, endorsed by, or associated with Google</strong>.
+    This policy describes how <strong>WeatherLog</strong> (“WeatherLog”), published by <span class="todo">[PUBLISHER]</span>,
+    accesses, uses, stores, and shares information, including information received from Google APIs.
+    WeatherLog is a personal, single-user backup job, not a mobile app or website. It has no other users,
+    and the only person who signs in with Google is its owner.
   </p>
 
   <h2>Summary</h2>
-  <!-- TODO(Rod): confirm or correct every bullet below against the shipped app. -->
   <ul>
-    <li>WeatherLog accesses only the Google user data listed under “Google user data we access” below, and only to provide WeatherLog’s user-facing features.</li>
-    <li>We do not sell Google user data or any other personal information.</li>
-    <li>We do not use Google user data for advertising, and we do not use it to develop, improve, or train generalized AI or machine-learning models.</li>
-    <li>You can revoke WeatherLog’s access to your Google Account at any time and ask us to delete your data (see below).</li>
-    <!-- TODO(Rod): ads / analytics / tracking SDKs? Pick and Peck and Connection Canvas say "No ads and no third-party analytics or tracking SDKs". Confirm for WeatherLog before keeping a line like that. -->
-    <li><span class="todo">[TODO(Rod): ads, analytics, or tracking SDKs in WeatherLog? e.g. “No ads and no third-party analytics or tracking SDKs.”]</span></li>
+    <li>WeatherLog stores only public weather readings. It collects no personal data.</li>
+    <li>It uses one Google scope, <code>drive.file</code>, so it can reach only the files it creates in the owner’s Google Drive.</li>
+    <li>No analytics, no cookies, no ads, and no selling or sharing of data.</li>
   </ul>
 
-  <h2>Google user data we access</h2>
-  <!-- TODO(Rod): exact OAuth scopes + Google APIs. Must match the Data Access list in the WeatherLog Google Cloud project, word for word. Delete any row that does not apply; do not add scopes the app does not request. -->
-  <p>When you sign in with Google and grant permission, WeatherLog requests the following Google OAuth scopes:</p>
-  <ul>
-    <li><span class="todo">[TODO(Rod): scope URL, e.g. <code>openid</code> / <code>…/auth/userinfo.email</code>]</span> — <span class="todo">[TODO(Rod): what data this lets WeatherLog read or write]</span></li>
-    <li><span class="todo">[TODO(Rod): any additional scope, and the Google API it belongs to]</span> — <span class="todo">[TODO(Rod): what data]</span></li>
-  </ul>
+  <h2>Google user data WeatherLog accesses</h2>
   <p>
-    WeatherLog does not request access to any other Google user data, such as your Gmail, contacts, or
-    Google Photos, unless it is listed above. <span class="todo">[TODO(Rod): confirm this sentence is true, and edit the examples if any of them is in fact requested.]</span>
-  </p>
-
-  <h2>How we use Google user data</h2>
-  <!-- TODO(Rod): one line per scope: the feature it powers. -->
-  <p>
-    WeatherLog uses the Google user data listed above only to provide and improve WeatherLog’s user-facing features,
-    specifically: <span class="todo">[TODO(Rod): e.g. “to identify your account and show your saved weather entries” / “to write your log to a Google Sheet you choose”]</span>.
-    We do not use it for any other purpose.
-  </p>
-
-  <h2>Other information WeatherLog handles</h2>
-  <!-- TODO(Rod): non-Google data: location? weather readings? notes? device settings? Where does weather data come from (which weather API)? -->
-  <ul>
-    <li><span class="todo">[TODO(Rod): e.g. location (if WeatherLog uses it, and whether it is precise or approximate)]</span></li>
-    <li><span class="todo">[TODO(Rod): e.g. weather entries or readings you log, and which weather data provider the App calls, if any]</span></li>
-    <li><span class="todo">[TODO(Rod): e.g. app settings stored on your device]</span></li>
-  </ul>
-
-  <h2>How we store and protect data</h2>
-  <!-- TODO(Rod): storage location (on device only? your own Google account? a RODRCODE-operated server or Firebase project?), retention period, encryption. -->
-  <p>
-    <span class="todo">[TODO(Rod): where WeatherLog stores data, e.g. “only on your device” / “in your own Google account” / “in a Firebase project operated by RodRCode LLC”]</span>.
-    OAuth tokens are <span class="todo">[TODO(Rod): where tokens are kept, e.g. “stored in the device keychain” / “held only for the session”]</span>.
-    Data is transmitted over encrypted HTTPS connections.
-    We keep Google user data only as long as needed to provide WeatherLog’s features,
-    <span class="todo">[TODO(Rod): retention period, e.g. “until you delete it or ask us to delete it”]</span>.
-  </p>
-
-  <h2>How we share data</h2>
-  <p>
-    We do not sell, rent, or trade Google user data or other personal information.
-    We do not share or transfer Google user data with third parties, except:
+    WeatherLog uses the <strong>Google Drive API (v3)</strong> with exactly one OAuth scope:
   </p>
   <ul>
-    <li>as needed to provide or improve WeatherLog’s user-facing features, with your consent;</li>
-    <li>with service providers that host or process data on our behalf <span class="todo">[TODO(Rod): name them, e.g. Google Firebase, or write “none”]</span>, under confidentiality obligations;</li>
-    <li>to comply with applicable law, or to protect against fraud, abuse, or security issues; or</li>
-    <li>as part of a merger, acquisition, or sale of assets, with notice to you.</li>
+    <li><code>https://www.googleapis.com/auth/drive.file</code> — see, create, and update only the specific Google Drive files and folders that WeatherLog itself creates.</li>
   </ul>
-  <p>No person at RodRCode LLC reads your Google user data unless you ask us to (for example, for support), it is needed for security purposes or to comply with law, or the data has been aggregated and anonymized.</p>
+  <p>
+    WeatherLog does not request any other scope. It cannot see or change any other files in Google Drive,
+    and it does not access Gmail, Calendar, Contacts, or Google profile or email information.
+    It reads no Google user data beyond the files it created.
+  </p>
+
+  <h2>How Google user data is used</h2>
+  <p>
+    WeatherLog uses this access only to create a private folder in the owner’s Google Drive and to upload
+    and update its weather log files there as a backup. It does not use Google user data for any other purpose,
+    including advertising or training AI or machine-learning models.
+  </p>
+
+  <h2>What data WeatherLog stores</h2>
+  <p>
+    WeatherLog stores only public weather readings for Oak Hill Splash Park, published by the City of Carrollton
+    through its public Perry Weather widget: temperature, feels-like temperature, wet-bulb globe temperature (WBGT),
+    humidity, dew point, wind, rain totals, lightning delay status, air quality (AQI), and forecast snapshots.
+    Each reading is saved with the time it was fetched and a label for which of the owner’s machines fetched it.
+  </p>
+  <p>WeatherLog does not collect personal data or data about any Google user, and it does not use analytics, cookies, or ads.</p>
+
+  <h2>How data is stored and protected</h2>
+  <ul>
+    <li>Weather readings are kept as CSV and JSON Lines files on the owner’s own computers.</li>
+    <li>About once an hour, those files are copied over encrypted HTTPS to a private folder in the owner’s own Google Drive. The folder is not shared.</li>
+    <li>The Google sign-in token is stored only in the backup tool’s configuration on the owner’s machine and is never shared.</li>
+    <!-- TODO(Rod): mention the planned private GitHub copy? It is not set up yet. Keep this bullet only if you want it mentioned; otherwise delete it. -->
+    <li><span class="todo">[TODO(Rod): planned GitHub copy — e.g. “A once-a-day copy of the weather log may also be kept in a private GitHub repository owned by the owner.”]</span></li>
+  </ul>
+
+  <h2>How data is shared</h2>
+  <p>
+    WeatherLog does not sell, rent, share, or transfer any data, including Google user data, to anyone.
+    The data stays in the owner’s own Google Drive and on the owner’s own computers.
+  </p>
 
   <h2>Google API Services User Data Policy (Limited Use)</h2>
   <p>
@@ -96,49 +86,29 @@
     including the Limited Use requirements.
   </p>
 
-  <h2>Revoking access</h2>
-  <p>You can remove WeatherLog’s access to your Google Account at any time:</p>
+  <h2>Revoking access and deleting data</h2>
   <ul>
-    <li>Go to <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a> (Google Account → Security → Your connections to third-party apps &amp; services), select <strong>WeatherLog</strong>, and choose <strong>Delete all connections</strong> you have with WeatherLog.</li>
-    <!-- TODO(Rod): in-app sign-out / disconnect? -->
-    <li><span class="todo">[TODO(Rod): in-app option, if any, e.g. “In WeatherLog, open Settings and tap Sign out”]</span></li>
-  </ul>
-  <p>Revoking access stops WeatherLog from accessing your Google data going forward. To also remove data WeatherLog already stored, see “Deleting your data”.</p>
-
-  <h2>Deleting your data</h2>
-  <!-- TODO(Rod): accounts and deletion: does WeatherLog have its own accounts? Is there in-app delete? What gets deleted and how fast? -->
-  <ul>
-    <li><span class="todo">[TODO(Rod): in-app deletion steps, if any, e.g. “Settings → Delete my data”]</span></li>
-    <li>
-      Email <a href="mailto:contact@rodrcode.com?subject=WeatherLog%20Data%20Deletion">contact@rodrcode.com</a>
-      with the subject “WeatherLog Data Deletion” from the email address of the Google Account you used with WeatherLog.
-      We will delete the Google user data and other personal data WeatherLog stores about you within
-      <span class="todo">[TODO(Rod): time frame, e.g. 30 days]</span> and confirm by email.
-    </li>
-    <li><span class="todo">[TODO(Rod): e.g. “Uninstalling WeatherLog removes data stored on your device.”]</span></li>
+    <li><strong>Revoke Google access:</strong> go to <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, select <strong>WeatherLog</strong>, and remove its access. WeatherLog then can no longer reach Google Drive.</li>
+    <li><strong>Delete the Drive copy:</strong> delete WeatherLog’s folder in Google Drive. WeatherLog never deletes or changes any other Drive files.</li>
+    <li><strong>Delete local copies:</strong> stop the scheduled job and delete the local weather log files on the owner’s computers.</li>
   </ul>
 
   <h2>Children</h2>
-  <p>
-    WeatherLog is not directed at children under 13. Do not provide personal information of children through WeatherLog.
-  </p>
+  <p>WeatherLog is a personal tool and is not directed at children.</p>
 
   <h2>Changes</h2>
   <p>
-    This policy may be updated when WeatherLog’s data practices change. The “last updated” date at the top will change accordingly.
-    If a change affects how we use Google user data, we will ask for your consent before using your data in the new way.
+    This policy will be updated if WeatherLog’s data practices change, and the date at the top will change.
+    WeatherLog will not use Google user data in a new way without updating this policy first.
   </p>
 
   <h2>Contact</h2>
-  <p>
-    RodRCode LLC · Texas, USA<br />
-    Questions about privacy:
-    <a href="mailto:contact@rodrcode.com?subject=WeatherLog%20Privacy">contact@rodrcode.com</a>
-  </p>
+  <!-- TODO(Rod): confirm the support/contact email (currently contact@rodrcode.com, pending confirmation). -->
+  <p>Questions about privacy: <a href="mailto:contact@rodrcode.com?subject=WeatherLog%20Privacy">contact@rodrcode.com</a> <span class="todo">[TODO(Rod): confirm support email]</span></p>
 
   <footer>
     <p><a href="index.html">Home</a> · <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a></p>
-    <p>&copy; 2026 RodRCode LLC</p>
+    <p>&copy; 2026 <span class="todo">[PUBLISHER]</span></p>
   </footer>
 </body>
 </html>
